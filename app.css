@@ -1,0 +1,136 @@
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  background-color: rgb(41, 41, 41);
+  color: white;
+  margin: 0px;
+}
+
+h1 {
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 48px;
+}
+
+h2 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.page-links {
+  display: flex;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: row;
+  width: 200px;
+  /* animation: 0.75s ease-in-out 0s 1 fadeIn; */
+}
+
+.page-link-btn {
+  background-color: transparent;
+  color: gray;
+  border: 1px solid transparent;
+  font-size: 24px;
+  padding: 20px;
+  margin: 0px 10px 0px 10px;
+  text-align: center;
+  width: 200px;
+  height: 70px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: 1000;
+  transition: all 0.25s ease;
+}
+
+.page-link-btn:hover {
+  cursor: pointer;
+  color: white;
+  border: 1px solid white;
+}
+
+.introduction {
+  display: grid;
+  grid-template-columns: 400px 200px;
+  column-gap: 50px;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  animation: 0.5s ease-in-out 0s 1 slideFromLeft;
+}
+
+.introduction-pic {
+  width: 200px;
+  height: auto;
+  border-radius: 1000px;
+  margin: auto;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin: 100px 50px 0px 50px;
+  animation: 0.5s ease-in-out 0s 1 slideFromRight;
+}
+
+.project-card {
+  flex-basis: 100%;
+  height: 450px;
+  margin: 20px;
+  background-color: rgb(33, 33, 33);
+  border: 2px solid transparent;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  cursor: pointer;
+  border: 2px solid lightgray;
+  transform: scale(1.025);
+}
+
+.project-card-image {
+  object-fit: cover;
+  width: 100%;
+  height: 60%;
+  border-top-right-radius: inherit;
+}
+
+.project-card-content {
+  padding: 10px;
+}
+
+.project-card-description {
+  color: lightgray;
+}
