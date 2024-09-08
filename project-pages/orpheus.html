@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <link rel="stylesheet" href="../app.css" />
+    <link rel="stylesheet" href="orpheus.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-links">
+      <button
+        type="button"
+        onclick="location.href='../index.html'"
+        class="page-link-btn"
+      >
+        Home
+      </button>
+      <button
+        type="button"
+        onclick="location.href='../projects.html'"
+        class="page-link-btn"
+      >
+        Projects
+      </button>
+    </div>
+    <div class="text-body">
+      <a class="project-link" href="https://github.com/stkivv/orpheus-player"
+        >View on Github</a
+      >
+      <h2 class="project-text-title">Orpheus Audio Player</h2>
+      <img id="main-img" src="../images/orpheus-main.png" />
+      <p>
+        This is a desktop application for playing audio files that I made using
+        Electron and Vue. It was my first time using Electron and this was
+        largely a learning experience, which I undertook due to my curiosity for
+        the technology. Vue was not entirely new to me, I had briefly used it in
+        my university Javascript course, but I wanted to refresh my knowledge.
+      </p>
+      <p>
+        This application supports all standard playback options (shuffle,
+        repeat, skip, etc) and provides a minimalistic, intuitive UI. What makes
+        this application different from many others of its kind is the extent to
+        which the user is able to customize the app's UI - the color of any
+        given UI element can be changed to whatever hex value the user wants.
+      </p>
+      <p>
+        While a browser usually would not allow you to load files from the users
+        machine (unless the user explicitly selects them), it is possible in
+        Electron by using the Node.js file system module in the main process.
+        This data can then be sent to the renderer process through IPC
+        (Inter-Process Communication). In my renderer process I was able to make
+        use of a hidden HTML audio element for handling playback. This element
+        also has a 'timeupdate' event which is used to update the UI and an
+        'ended' event which is used to trigger the playback of the next track. A
+        history of played tracks is kept, so that the user can move through it
+        backwards.
+      </p>
+      <p>
+        As I previously mentioned, the color of any UI element can be changed
+        through the settings. For this I used CSS variables, an interface with
+        the same fields and a mapping between the two. When a value in the
+        setting JSON changes, the value is applied to the corresponding CSS
+        variable. The settings JSON is saved to localStorage.
+      </p>
+      <p>
+        I had a lot of fun making this project and I found Electron to be quite
+        intuitive. I am aware that Electron is often criticized for large file
+        sizes and high memory usage, but being able to write cross-platform
+        desktop applications with web technology is very neat in my opinion. I
+        think there are some contexts where it might make sense to use Electron
+        over something like Flutter. For example when you already have a web
+        application and you want to create a desktop version for it, then using
+        Electron would likely result in much quicker development.
+      </p>
+      <p>
+        The project in its current state is what I would call a minimum viable
+        product and I will certainly keep developing this in the future. I have
+        listed a few potential developments I have considered for the future
+        below:
+      </p>
+      <ul>
+        <li>external audio sources</li>
+        <li>support for multiple audio sources</li>
+        <li>support for file tags</li>
+        <li>search, sort, filtering for tracks</li>
+        <li>more customization options</li>
+      </ul>
+    </div>
+  </body>
+</html>
