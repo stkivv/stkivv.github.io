@@ -1,74 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title></title>
-    <link rel="stylesheet" href="app.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Sevillana&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="page-links">
-      <button
-        type="button"
-        onclick="navigateWithDelay('index.html')"
-        class="page-link-btn"
-        style="color: white"
-      >
-        Home
-      </button>
-      <button
-        type="button"
-        onclick="navigateWithDelay('projects.html')"
-        class="page-link-btn"
-      >
-        Projects
-      </button>
-    </div>
-    <div class="introduction" id="introduction">
-      <div class="introuction-container">
-        <h1 class="introduction-title">Hello, world!</h1>
-        <p class="introduction-text">
-          My name is Stefan Kivvistik and the purpose of this page is to
-          introduce my coding projects and share some thoughts I've had while
-          making them.
-        </p>
-      </div>
-      <img class="introduction-pic" src="images/cv_pic.png" />
-      <div class="introduction-contacts">
-        <p>+37253013171</p>
-        <p>stefankivv@gmail.com</p>
-        <p>
-          <a href="https://www.linkedin.com/in/stefan-kivvistik-48b81829a"
-            >LinkedIn</a
-          >
-        </p>
-        <p><a href="https://github.com/stkivv">Github</a></p>
-      </div>
-    </div>
-  </body>
-  <script>
-    function navigateWithDelay(url) {
-      const element = document.getElementById("introduction");
-      element.animate(
-        [{ transform: "translateX(0)" }, { transform: "translateX(-100%)" }],
-        {
-          duration: 125,
-          fill: "forwards",
-        }
-      );
 
-      setTimeout(function () {
-        location.href = url;
-      }, 125);
-    }
-  </script>
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+	<link rel="stylesheet" href="app.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+		rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Sevillana&display=swap"
+		rel="stylesheet" />
+</head>
+
+<body>
+	<div class="page-links">
+		<button type="button" onclick="location.href'index.html'" class="page-link-btn" style="color: white">
+			Home
+		</button>
+		<button type="button" onclick="location.href='projects.html'" class="page-link-btn">
+			Projects
+		</button>
+	</div>
+	<div class="introduction" id="introduction">
+		<div class="introuction-container">
+			<h1 class="introduction-title">Hello, world!</h1>
+			<p class="introduction-text">
+				My name is Stefan Kivvistik and this page is meant to serve as a sort of portfolio, where I
+				introduce my coding projects and share some thoughts I've had while
+				making them.
+			</p>
+		</div>
+		<img class="introduction-pic" src="images/cv_pic.png" />
+		<div class="introduction-contacts">
+			<p>+37253013171</p>
+			<p>stefankivv@gmail.com</p>
+			<p>
+				<a href="https://www.linkedin.com/in/stefan-kivvistik-48b81829a">LinkedIn</a>
+			</p>
+			<p><a href="https://github.com/stkivv">Github</a></p>
+		</div>
+	</div>
+</body>
+
 </html>
