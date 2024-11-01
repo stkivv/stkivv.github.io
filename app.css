@@ -14,6 +14,7 @@
 	--border-bg: rgb(255, 98, 0);
 	--background-color: rgb(30, 30, 30);
 	--el-background-color: rgb(40, 40, 40);
+	--box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 body {
@@ -89,9 +90,9 @@ td {
 	display: flex;
 	margin: 20px;
 	background-color: var(--el-background-color);
-	border: 1px solid var(--border-bg);
 	border-radius: 8px;
 	padding: 40px;
+	box-shadow: var(--box-shadow);
 	animation: 0.25s ease-in 0s 1 fadeIn;
 }
 
@@ -179,7 +180,7 @@ td {
 	height: auto;
 	border-radius: 6px;
 	background-color: var(--el-background-color);
-	border: 1px solid gray;
+	box-shadow: var(--box-shadow);
 	transition: 0.1s ease-in;
 }
 
@@ -187,7 +188,6 @@ td {
 	cursor: pointer;
 	transform: scale(1.025);
 	background: var(--border-bg);
-	border: 1px solid var(--border-bg);
 }
 
 .project-card-image {
@@ -226,6 +226,7 @@ td {
 	padding: 30px;
 	border-radius: 8px;
 	background-color: var(--el-background-color);
+	box-shadow: var(--box-shadow);
 	animation: 0.25s ease-in-out 0s 1 fadeIn;
 }
 
