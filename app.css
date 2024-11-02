@@ -11,7 +11,7 @@
 }
 
 :root {
-	--border-bg: rgb(255, 98, 0);
+	--highlight: #e89331;
 	--background-color: rgb(30, 30, 30);
 	--el-background-color: rgb(40, 40, 40);
 	--box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -75,7 +75,7 @@ td {
 .page-link-btn:hover {
 	cursor: pointer;
 	color: white;
-	background: var(--border-bg)
+	background-color: var(--highlight);
 }
 
 .introduction-wrapper {
@@ -104,10 +104,10 @@ td {
 }
 
 .introduction-title {
-	font-family: "Pixelify Sans", sans-serif;
+	font-family: "Niconne", sans-serif;
 	font-size: 64px;
 	line-height: 0.75;
-	text-shadow: 3px 3px rgb(255, 98, 0);
+	color: var(--highlight);
 }
 
 .introduction-pic {
@@ -182,12 +182,13 @@ td {
 	background-color: var(--el-background-color);
 	box-shadow: var(--box-shadow);
 	transition: 0.1s ease-in;
+	border: 1px solid transparent;
 }
 
 .project-card:hover {
 	cursor: pointer;
 	transform: scale(1.025);
-	background: var(--border-bg);
+	border: 1px solid var(--highlight);
 }
 
 .project-card-image {
