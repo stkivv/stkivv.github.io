@@ -1,11 +1,9 @@
 @keyframes fadeIn {
 	0% {
-		transform: translateY(-10px);
 		opacity: 0;
 	}
 
 	100% {
-		transform: translateY(0px);
 		opacity: 1;
 	}
 }
@@ -15,6 +13,7 @@
 	--background-color: rgb(30, 30, 30);
 	--el-background-color: rgb(40, 40, 40);
 	--box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -31,6 +30,11 @@ body {
 
 a {
 	color: lightgray;
+}
+
+a:hover {
+	cursor: pointer;
+	color: white;
 }
 
 
@@ -51,47 +55,16 @@ td {
 	text-align: center;
 }
 
-.page-links {
-	display: flex;
-	justify-content: center;
-	position: sticky;
-	top: 0;
-	background-color: rgb(25, 25, 25);
-}
-
-.page-link-btn {
-	background-color: transparent;
-	color: gray;
-	font-size: 18px;
-	text-align: center;
-	width: 100px;
-	padding: 13px;
-	transition: all 0.25s ease;
-	border: 2px solid transparent;
-	border-bottom-left-radius: 20px;
-	border-top-right-radius: 20px;
-}
-
-.page-link-btn:hover {
-	cursor: pointer;
-	color: white;
-	background-color: var(--highlight);
-}
-
-.introduction-wrapper {
-	width: 100vw;
-	height: calc(100vh - 52px);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.container {
+	margin: 30px 20%
 }
 
 .introduction {
 	display: flex;
-	margin: 20px;
+	margin-bottom: 20px;
 	background-color: var(--el-background-color);
 	border-radius: 8px;
-	padding: 40px;
+	padding: 10px 40px;
 	box-shadow: var(--box-shadow);
 	animation: 0.25s ease-in 0s 1 fadeIn;
 }
@@ -106,7 +79,7 @@ td {
 .introduction-title {
 	font-family: "Niconne", sans-serif;
 	font-size: 64px;
-	line-height: 0.75;
+	line-height: 0.5;
 	color: var(--highlight);
 }
 
@@ -124,14 +97,6 @@ td {
 	color: lightgray;
 	align-content: center;
 	text-wrap: nowrap;
-}
-
-.introduction-contacts a {
-	color: lightgray;
-}
-
-.introduction-contacts a:hover {
-	color: white;
 }
 
 @media (max-width: 900px) {
@@ -154,25 +119,7 @@ td {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-	margin-left: 20%;
-	margin-right: 20%;
-	margin-top: 10px;
-
-	& div:nth-child(1) {
-		animation: 0.25s ease-in 1 fadeIn;
-	}
-
-	& div:nth-child(2) {
-		animation: 0.35s ease-in 1 fadeIn;
-	}
-
-	& div:nth-child(3) {
-		animation: 0.45s ease-in 1 fadeIn;
-	}
-
-	& div:nth-child(4) {
-		animation: 0.55s ease-in 1 fadeIn;
-	}
+	animation: 0.25s ease-in 1 fadeIn;
 }
 
 .project-card {
@@ -187,7 +134,7 @@ td {
 
 .project-card:hover {
 	cursor: pointer;
-	transform: scale(1.025);
+	transform: scale(1.01);
 	border: 1px solid var(--highlight);
 }
 
@@ -205,6 +152,10 @@ td {
 
 .project-card-content {
 	padding: 10px;
+}
+
+.project-card-content h2 {
+	color: var(--highlight);
 }
 
 .project-card-description {
@@ -226,6 +177,7 @@ td {
 	margin-bottom: 15px;
 	padding: 30px;
 	border-radius: 8px;
+	text-align: left;
 	background-color: var(--el-background-color);
 	box-shadow: var(--box-shadow);
 	animation: 0.25s ease-in-out 0s 1 fadeIn;
@@ -260,6 +212,30 @@ td {
 .project-link:hover {
 	background-color: rgb(46, 163, 44);
 	color: white;
+}
+
+.project-close-btn {
+	background-color: transparent;
+	color: red;
+	padding: 20px;
+	line-height: 0.75;
+	border: 2px solid red;
+	border-radius: 60px;
+	font-weight: bolder;
+	float: right;
+	transition: 0.125s;
+}
+
+.project-close-btn:hover {
+	cursor: pointer;
+	background-color: red;
+	color: white;
+}
+
+.back-link {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
 }
 
 .screenshot {
