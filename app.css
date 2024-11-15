@@ -59,6 +59,12 @@ td {
 	margin: 30px 20%
 }
 
+@media (max-width: 900px) {
+	.container {
+		margin: 10px 20px;
+	}
+}
+
 .introduction {
 	display: flex;
 	margin-bottom: 20px;
@@ -73,13 +79,13 @@ td {
 	display: flex;
 	flex-direction: column;
 	max-width: 400px;
-	margin-right: 20px;
+	margin: auto;
 }
 
 .introduction-title {
 	font-family: "Niconne", sans-serif;
 	font-size: 64px;
-	line-height: 0.5;
+	line-height: 0.8;
 	color: var(--highlight);
 }
 
@@ -101,15 +107,12 @@ td {
 
 @media (max-width: 900px) {
 	.introduction {
-		margin-top: 100px;
 		display: flex;
 		flex-direction: column;
 	}
 
-	.introduction-text {
-		text-align: center;
-	}
-
+	.introduction-main,
+	.introduction-text,
 	.introduction-contacts {
 		text-align: center;
 	}
@@ -121,6 +124,7 @@ td {
 	gap: 10px;
 	animation: 0.25s ease-in 1 fadeIn;
 }
+
 
 .project-card {
 	display: flex;
@@ -152,6 +156,7 @@ td {
 
 .project-card-content {
 	padding: 10px;
+	overflow: hidden;
 }
 
 .project-card-content h2 {
