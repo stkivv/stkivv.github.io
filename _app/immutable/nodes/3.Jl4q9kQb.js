@@ -1,0 +1,1 @@
+import"../chunks/DsnmJJEf.js";import"../chunks/BHUkTAs8.js";import{B as r,C as t}from"../chunks/8rH0_N_0.js";var p=r('<div><h1>404 - Page Not Found</h1> <p>Sorry, we couldn’t find that page.</p> <a href="/">Go back home</a></div>');function n(o){var a=p();t(o,a)}export{n as component};
